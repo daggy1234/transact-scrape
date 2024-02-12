@@ -1,0 +1,12 @@
+{
+  "name": "scrape-transact",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.41.2"
+  },
+  "scripts": {
+    "scrape": "node index.js"
+  }
+}
