@@ -7,6 +7,7 @@
     "playwright": "^1.41.2"
   },
   "scripts": {
-    "scrape": "node index.js"
+    "scrape": "node index.js",
+    "merge": "node merge.js"
   }
 }

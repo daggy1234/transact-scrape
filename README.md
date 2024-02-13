@@ -29,3 +29,10 @@ yarn playwright install
 
 5) Let it run, it'll take like ~5-10 minutes cause transact fucking sucks L.
 
+## Merge Final Files
+
+Run this to merge them into combined `transact_data.json`
+
+```shell
+yarn merge
+```
