@@ -130,3 +130,5 @@ dist
 .pnp.*
 
 transact_data.json
+ss/
+textItems/
