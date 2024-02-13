@@ -8,6 +8,13 @@ const allTextItems = [];
  const profilePath = `${user_data}/${profile}`;
 let pageIndex = 0;
 let currInd = 1;
+
+
+function roundDownToNearestTen(num) {
+    return num - (num % 10);
+}
+
+
 (async () => {
   // Launch a new browser instance
 
@@ -50,8 +57,9 @@ let currInd = 1;
   console.log("UWU?")
   const element = await page.locator('strong:nth-child(2)');
   const text = await element.innerText();
-  const target = parseInt(text,10);
-  console.log(`TARGET NO OF PAGES IS ${target}`);
+  const pre_target = parseInt(text,10);
+  const target = roundDownToNearestTen(pre_target)
+  console.log(`TARGET NO OF PAGES IS ${target} (processed from ${pre_target})`);
   const innerHTML = await page.innerHTML('#MainContent_ResultPanel');
    allTextItems.push(innerHTML)
    pageIndex++;
@@ -186,7 +194,7 @@ await page.waitForTimeout(7000);
 currInd = 4;
  try {
   while (true) {
-      if (pageIndex >= 71) {
+      if (pageIndex >= 71 || pageIndex >= target) {
         break;
       }
       if (pageIndex % 10 === 0) {
@@ -254,7 +262,7 @@ await page.waitForTimeout(7000);
 currInd = 3;
  try {
   while (true) {
-      if (pageIndex >= 95) {
+      if (pageIndex >= 95 || pageIndex >= target)  {
         break;
       }
       if (pageIndex % 10 === 0) {
