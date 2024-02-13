@@ -8,6 +8,7 @@
   },
   "scripts": {
     "scrape": "node index.js",
-    "merge": "node merge.js"
+    "merge": "node merge.js",
+    "reset": "rm -rf ss && rm -rf textItems"
   }
 }
