@@ -4,7 +4,13 @@
 
 ## Setup
 
-1) Make sure Yarn is Installed
+1) Make sure Yarn is Installed. As is NPM.
+
+2) Git clone this repo
+```shell
+git clone https://github.com/daggy1234/transact-scrape
+cd transact-scrape
+```
 
 2) RUn Setup
 ```shell
