@@ -304,6 +304,7 @@ if (pageIndex >= target) {
   fs.writeFileSync(filePath, JSON.stringify({data: allTextItems}, null, 2), { encoding: 'utf-8' });
   return;
 }
+
   await browser.close();
   
 })();
